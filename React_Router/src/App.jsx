@@ -1,4 +1,3 @@
-import './App.css'
 import Footer from './conponent/Footer'
 import Header from './conponent/Header'
 import { Outlet } from 'react-router-dom'

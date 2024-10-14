@@ -2,7 +2,7 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
-import { createBrowserRouter, createRoutesFromElements, Route, Router, RouterProvider } from 'react-router-dom'
+import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom'
 import {User,Home,Contact,About,GitHub} from "./index.js"
 import { gitHubApi } from './conponent/GitHub.jsx'
 

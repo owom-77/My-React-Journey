@@ -11,6 +11,7 @@ function App() {
   const [convert, setConvert] = useState(0);
 
   const showCurrency = useCurrency(from);
+  console.log(showCurrency)
 
   const options = Object.keys(showCurrency);
 
