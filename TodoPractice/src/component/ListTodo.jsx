@@ -6,10 +6,6 @@ const ListTodo = ({ post }) => {
   const [editMode, setEditMode] = useState(false);
   const [editedText, setEditedText] = useState(post.text);
 
-  const handleEdit = () => {
-    setEditMode(true);
-  };
-
   const handleSave = () => {
     updateTodo(post.id, editedText);
     setEditMode(false);
@@ -34,7 +30,20 @@ const ListTodo = ({ post }) => {
         >
           Delete
         </button>
-        {editMode ? (
+        <button
+        className={`${editMode ? "bg-green-500 px-4 py-1 text-white rounded hover:bg-green-600" : "bg-blue-500 px-4 py-1 text-white rounded hover:bg-blue-600"}  `}
+        onClick={()=>{
+            if(editMode){
+                handleSave()
+            }else{
+                setEditMode(prev => !prev)
+            }
+        }}
+        >
+        {editMode ? "Save" : "Edit"}   
+        </button>
+
+        {/* {editMode ? (
           <button
             className="bg-green-500 px-4 py-1 text-white rounded hover:bg-green-600"
             onClick={handleSave}
@@ -48,7 +57,7 @@ const ListTodo = ({ post }) => {
           >
             Edit
           </button>
-        )}
+        )} */}
       </div>
     </div>
   );
