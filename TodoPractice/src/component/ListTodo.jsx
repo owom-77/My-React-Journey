@@ -32,14 +32,7 @@ const ListTodo = ({ post }) => {
         </button>
         <button
         className={`${editMode ? "bg-green-500 px-4 py-1 text-white rounded hover:bg-green-600" : "bg-blue-500 px-4 py-1 text-white rounded hover:bg-blue-600"}  `}
-        onClick={()=>{
-            if(editMode){
-                handleSave()
-            }else{
-                setEditMode(prev => !prev)
-            }
-        }}
-        >
+        onClick={()=>editMode ? handleSave() : setEditMode(pre => !pre)}>
         {editMode ? "Save" : "Edit"}   
         </button>
 
